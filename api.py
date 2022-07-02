@@ -23,7 +23,7 @@ def get_similarity_two_sentences():
     passage_sentences = jsonData['sentence'][1]
 
     query_embeddings = model.encode(query_sentence)
-
+ 
     passage_embedding = model.encode(passage_sentences)
 
     scores = util.cos_sim(query_embeddings, passage_embedding)
